@@ -14,6 +14,7 @@ Python 3 should be installed
 
 ## Dataset
 creditcard_2023.csv should be in the same project directory as the FraudDetection.py file
+- https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023
 
 ## Code Overview
 Custom Logistic Regression
