@@ -2,11 +2,11 @@
 
 ## Description
 The FraudDetection project implements a credit card fraud detection system using both custom and scikit-learn models. It includes:
-- A custom Logistic Regression implementation.
-- A custom Neural Network implementation.
-- Comparisons with scikit-learn's Logistic Regression and Neural Network classifiers.
-- Evaluation metrics such as accuracy, precision, recall, and F1 score.
-- Precision-Recall curve visualization.
+- A custom Logistic Regression implementation
+- A custom Neural Network implementation
+- Comparisons with scikit-learn's Logistic Regression and Neural Network classifiers
+- Evaluation metrics such as accuracy, precision, recall, and F1 score
+- Precision-Recall curve visualization
 
 ## Installation
 Python 3 should be installed
@@ -17,19 +17,19 @@ creditcard_2023.csv should be in the same project directory as the FraudDetectio
 
 ## Code Overview
 Custom Logistic Regression
-- Implements a binary logistic regression model from scratch.
-- Uses sigmoid function for predictions.
-- Updates weights and bias using gradient descent.
+- Implements a binary logistic regression model from scratch
+- Uses sigmoid function for predictions
+- Updates weights and bias using gradient descent
 Custom Neural Network
-- Implements a basic feedforward neural network with one hidden layer.
-- Uses sigmoid activation function.
-- Performs forward and backward propagation for training.
+- Implements a basic feedforward neural network with one hidden layer
+- Uses sigmoid activation function
+- Performs forward and backward propagation for training
 Evaluation Function
-- Computes and prints accuracy, precision, recall, and F1 score.
-- Generates and saves a Precision-Recall curve plot.
+- Computes and prints accuracy, precision, recall, and F1 score
+- Generates and saves a Precision-Recall curve plot
 Cross-Validation
-- Uses K-Fold Cross-Validation to split data into 5 folds.
-- Trains and evaluates both custom and scikit-learn models on each fold.
+- Uses K-Fold Cross-Validation to split data into 5 folds
+- Trains and evaluates both custom and scikit-learn models on each fold
 
 ## Results
 ### === Fold 1 ===
