@@ -32,6 +32,8 @@ Cross-Validation
 - Trains and evaluates both custom and scikit-learn models on each fold
 
 ## Results
+The scikit-learn Neural Network is consistently associated with the highest accuracy and F1 scores. The scikit-learn Logistic Regression demonstrates performs better than both the Logistic Regression Implementation and the Neural Network Implementation. The Neural Network Implementation performed better than Logistic Regression Implementation.
+
 ### === Fold 1 ===
 Logistic Regression Implementation:
 - Accuracy: 0.9409
