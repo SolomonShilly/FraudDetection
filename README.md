@@ -63,16 +63,19 @@ Logistic Regression Implementation:
 - Precision: 0.9940
 - Recall: 0.8861
 - F1 Score: 0.9370
+  
 Neural Network Implementation:
 - Accuracy: 0.9558
 - Precision: 0.9783
 - Recall: 0.9322
 - F1 Score: 0.9547
+  
 scikit-learn Logistic Regression:
 - Accuracy: 0.9653
 - Precision: 0.9785
 - Recall: 0.9515
 - F1 Score: 0.9648
+  
 scikit-learn Neural Network:
 - Accuracy: 0.9989
 - Precision: 0.9982
@@ -85,16 +88,19 @@ Logistic Regression Implementation:
 - Precision: 0.9935
 - Recall: 0.8872
 - F1 Score: 0.9373
+  
 Neural Network Implementation:
 - Accuracy: 0.9566
 - Precision: 0.9777
 - Recall: 0.9344
 - F1 Score: 0.9556
+  
 scikit-learn Logistic Regression:
 - Accuracy: 0.9653
 - Precision: 0.9777
 - Recall: 0.9523
 - F1 Score: 0.9648
+  
 scikit-learn Neural Network:
 - Accuracy: 0.9989
 - Precision: 0.9978
@@ -107,16 +113,19 @@ Logistic Regression Implementation:
 - Precision: 0.9935
 - Recall: 0.8854
 - F1 Score: 0.9363
+  
 Neural Network Implementation:
 - Accuracy: 0.9565
 - Precision: 0.9772
 - Recall: 0.9349
 - F1 Score: 0.9556
+  
 scikit-learn Logistic Regression:
 - Accuracy: 0.9648
 - Precision: 0.9781
 - Recall: 0.9509
 - F1 Score: 0.9643
+  
 scikit-learn Neural Network:
 - Accuracy: 0.9990
 - Precision: 0.9982
@@ -129,16 +138,19 @@ Logistic Regression Implementation:
 - Precision: 0.9932
 - Recall: 0.8841
 - F1 Score: 0.9355
+  
 Neural Network Implementation:
 - Accuracy: 0.9561
 - Precision: 0.9770
 - Recall: 0.9341
 - F1 Score: 0.9551
+  
 scikit-learn Logistic Regression:
 - Accuracy: 0.9639
 - Precision: 0.9773
 - Recall: 0.9498
 - F1 Score: 0.9634
+  
 scikit-learn Neural Network:
 - Accuracy: 0.9986
 - Precision: 0.9976
