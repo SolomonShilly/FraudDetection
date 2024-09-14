@@ -13,7 +13,7 @@ Python 3 should be installed
 - pip install pandas numpy scikit-learn matplotlib
 
 ## Dataset
-creditcard_2023.csv should be in the same project directory as the FraudDetection.py file
+creditcard_2023.csv from Kaggle should be in the same project directory as the FraudDetection.py file
 - https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023
 
 ## Code Overview
