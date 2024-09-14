@@ -38,16 +38,19 @@ Logistic Regression Implementation:
 - Precision: 0.9935
 - Recall: 0.8879
 - F1 Score: 0.9377
+  
 Neural Network Implementation:
 - Accuracy: 0.9559
 - Precision: 0.9759
 - Recall: 0.9351
 - F1 Score: 0.9551
+  
 scikit-learn Logistic Regression:
 - Accuracy: 0.9652
 - Precision: 0.9771
 - Recall: 0.9529
 - F1 Score: 0.9648
+  
 scikit-learn Neural Network:
 - Accuracy: 0.9988
 - Precision: 0.9977
