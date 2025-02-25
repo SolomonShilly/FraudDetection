@@ -17,9 +17,7 @@ creditcard_2023.csv from Kaggle should be in the same project directory as the F
 -----------------------------------------------------
 ## Updated Results
 
-=== Fold 1 ===
-
-
+### === Fold 1 ===
 Logistic Regression Implementation:
 - Accuracy: 0.9564
 - Precision: 0.9714
@@ -44,7 +42,7 @@ scikit-learn Neural Network:
 - Recall: 0.9998
 - F1 Score: 0.9984
 
-=== Fold 2 ===
+### === Fold 2 ===
 Logistic Regression Implementation:
 - Accuracy: 0.9553
 - Precision: 0.9715
