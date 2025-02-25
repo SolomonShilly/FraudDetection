@@ -1,10 +1,8 @@
 # FraudDetection
 
 ## Description
-The FraudDetection project implements a credit card fraud detection system using both custom and scikit-learn models. It includes:
-- A custom Logistic Regression implementation
-- A custom Neural Network implementation
-- Comparisons with scikit-learn's Logistic Regression and Neural Network classifiers
+- A Logistic Regression implementation & Neural Network implementation
+- Comparisons with scikit-learn's Logistic Regression & Neural Network classifiers
 - Evaluation metrics such as accuracy, precision, recall, and F1 score
 - Precision-Recall curve visualization
 
@@ -16,24 +14,60 @@ Python 3 should be installed
 creditcard_2023.csv from Kaggle should be in the same project directory as the FraudDetection.py file
 - https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023
 
-## Code Overview
-Custom Logistic Regression
-- Implements a binary logistic regression model from scratch
-- Uses sigmoid function for predictions
-- Updates weights and bias using gradient descent
-Custom Neural Network
-- Implements a basic feedforward neural network with one hidden layer
-- Uses sigmoid activation function
-- Performs forward and backward propagation for training
-Evaluation Function
-- Computes and prints accuracy, precision, recall, and F1 score
-- Generates and saves a Precision-Recall curve plot
-Cross-Validation
-- Uses K-Fold Cross-Validation to split data into 5 folds
-- Trains and evaluates both custom and scikit-learn models on each fold
+-----------------------------------------------------
+## Updated Results
+=== Fold 1 ===
+Logistic Regression Implementation:
+- Accuracy: 0.9564
+- Precision: 0.9714
+- Recall: 0.9405
+- F1 Score: 0.9557
 
-## Results
-The scikit-learn Neural Network is consistently associated with the highest accuracy and F1 scores. The scikit-learn Logistic Regression demonstrates performs better than both the Logistic Regression Implementation and the Neural Network Implementation. The Neural Network Implementation performed better than Logistic Regression Implementation.
+Neural Network Implementation:
+- Accuracy: 0.9560
+- Precision: 0.9759
+- Recall: 0.9351
+- F1 Score: 0.9551
+
+scikit-learn Logistic Regression:
+- Accuracy: 0.9654
+- Precision: 0.9777
+- Recall: 0.9526
+- F1 Score: 0.9650
+
+scikit-learn Neural Network:
+- Accuracy: 0.9984
+- Precision: 0.9970
+- Recall: 0.9998
+- F1 Score: 0.9984
+
+=== Fold 2 ===
+Logistic Regression Implementation:
+- Accuracy: 0.9553
+- Precision: 0.9715
+- Recall: 0.9382
+- F1 Score: 0.9545
+
+Neural Network Implementation:
+- Accuracy: 0.9553
+- Precision: 0.9782
+- Recall: 0.9313
+- F1 Score: 0.9542
+
+scikit-learn Logistic Regression:
+- Accuracy: 0.9645
+- Precision: 0.9779
+- Recall: 0.9505
+- F1 Score: 0.9640
+
+scikit-learn Neural Network:
+- Accuracy: 0.9987
+- Precision: 0.9974
+- Recall: 1.0000
+- F1 Score: 0.9987
+
+-----------------------------------------------------
+## Old Results
 
 ### === Fold 1 ===
 Logistic Regression Implementation:
