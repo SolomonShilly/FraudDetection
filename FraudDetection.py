@@ -6,6 +6,7 @@ from sklearn.linear_model import LogisticRegression as SklearnLogisticRegression
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Load the transactions from the csv file into a Pandas dataframe
 data = pd.read_csv('creditcard_2023.csv')
@@ -15,7 +16,7 @@ data = pd.read_csv('creditcard_2023.csv')
 # We will train the model in 1000 iterations which is assigned to numIterations
 # weights and bias will be assigned later
 class LogisticRegression:
-    def __init__(self, learningRate=0.01, numIterations=1000):
+    def __init__(self, learningRate=0.1, numIterations=100):
         self.learningRate = learningRate
         self.numIterations = numIterations
         self.weights = None
@@ -44,7 +45,7 @@ class LogisticRegression:
         # The value of z is computed taking the dot product of X and weights, and adding bias to it
         # z is a raw prediction we will apply to the sigmoid method
         # yPred is the value returned from the sigmoid method, it is the prediction for y
-        for _ in range(self.numIterations):
+        for n in range(self.numIterations):
             z = np.dot(x, self.weights) + self.bias
             yPred = self.sigmoid(z)
 
@@ -64,11 +65,11 @@ class LogisticRegression:
     def predict(self, x):
         z = np.dot(x, self.weights) + self.bias
         yPred = self.sigmoid(z)
-        return (yPred > 0.5).astype(int)
+        return (yPred > 0.25).astype(int)
 
 # Neural Network Model implementation
 class NeuralNetwork:
-    def __init__(self, layers, learningRate=0.01, numIterations=1000):
+    def __init__(self, layers, learningRate=0.1, numIterations=100):
         self.layers = layers
         self.learningRate = learningRate
         self.numIterations = numIterations
@@ -131,10 +132,10 @@ class NeuralNetwork:
         grads = {}
         m = Y.shape[1]
         for i in reversed(range(1, len(self.layers))):
-            A_prev = cache[f"A{i - 1}"]
+            APrev = cache[f"A{i - 1}"]
             A = cache[f"A{i}"]
             dZ = A - Y
-            dW = (1 / m) * np.dot(dZ, A_prev.T)
+            dW = (1 / m) * np.dot(dZ, APrev.T)
             db = (1 / m) * np.sum(dZ, axis=1, keepdims=True)
             grads[f"dW{i}"] = dW
             grads[f"db{i}"] = db
@@ -151,7 +152,7 @@ class NeuralNetwork:
     # The method will perform forward propagation, compute costs, compute gradients, and update parameters
     def fit(self, X, y):
         # Training the neural network
-        for _ in range(self.numIterations):
+        for n in range(self.numIterations):
             cache = self.forward_propagation(X)
             cost = self.compute_cost(cache[f"A{len(self.layers) - 1}"], y)
             grads = self.backward_propagation(cache, y)
@@ -202,7 +203,7 @@ def evaluate_model(yTrue, yPred):
 # Initialize K-Fold Cross-Validation to split data into 5 folds
 # Each will be used once as a validation set and 4 times as a training set
 # The dataset will be randomly shuffled before being split into folds
-kf = KFold(n_splits=5, shuffle=True, random_state=42)
+kf = KFold(n_splits=2, shuffle=True, random_state=42)
 
 # We will drop the id and class columns
 # ID provides us with no information and class is what we will predict
@@ -214,18 +215,18 @@ y = data['Class'].values
 # Neural Network Model used to recognize patterns and make predictions
 # X.shape[1] retrieves the number of features/columns from X
 # We set the number of neurons to 16, higher value = more cost and overfitting risk but it will learn more complex patterns
-lrModel = LogisticRegression(learningRate=0.01, numIterations=1000)
+lrModel = LogisticRegression(learningRate=0.1, numIterations=100)
 nnLayers = [X.shape[1], 16, 1]
-nnModel = NeuralNetwork(layers=nnLayers, learningRate=0.01, numIterations=1000)
+nnModel = NeuralNetwork(layers=nnLayers, learningRate=0.1, numIterations=100)
 
 # Perform K-Fold Cross-Validation to train neural network and logistic regression
 # Sci-kit learn implementations will be included as well
 # We will loop through each fold
 # The data will be split into training and test sets
-for fold, (train_index, test_index) in enumerate(kf.split(X, y)):
+for fold, (trainIndex, testIndex) in enumerate(kf.split(X, y)):
     print(f"=== Fold {fold + 1} ===")
-    xTrain, xTest = X[train_index], X[test_index]
-    yTrain, yTest = y[train_index], y[test_index]
+    xTrain, xTest = X[trainIndex], X[testIndex]
+    yTrain, yTest = y[trainIndex], y[testIndex]
 
     # Normalize data by removing the mean and scaling to unit variance
     # We will than fit the scaler to transform the data
@@ -265,3 +266,4 @@ for fold, (train_index, test_index) in enumerate(kf.split(X, y)):
     yPredSKNN = skNNModel.predict(xTestProcessed)
     print("scikit-learn Neural Network:")
     evaluate_model(yTest, yPredSKNN)
+
